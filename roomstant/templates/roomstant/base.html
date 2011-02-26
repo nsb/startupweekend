@@ -10,12 +10,7 @@
   <body>
     {% block page %}{% endblock page %}
     {% block javascript %}
-    <script type="text/javascript">
-      document.write(unescape("%3C")+"script src='"+(document.location.protocol=="https:"?"https://":"http://")+"www.google.com/jsapi"+"' type='text/javascript'"+unescape("%3E%3C")+"/script"+unescape("%3E"));
-    </script>
-    <script type="text/javascript">
-      google.load("jquery", "1");
-    </script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
     {% endblock javascript %}
   </body>
 </html>
