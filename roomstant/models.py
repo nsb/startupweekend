@@ -24,7 +24,7 @@ class AvailableRoom(models.Model):
     date = models.DateTimeField()
 
     def __unicode__(self):
-        return self.room
+        return self.room.number
 
 class Booking(models.Model):
     name = models.CharField(max_length=512)
