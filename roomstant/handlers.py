@@ -3,12 +3,17 @@
 from piston.handler import BaseHandler, AnonymousBaseHandler
 from piston.utils import validate, rc, FormValidationError
 
-from models import Hotel, Room
+from models import Hotel, Room, AvailableRoom
 
 class HotelHandler(BaseHandler):
     model = Hotel
-    fields = ()
 
 class RoomHandler(BaseHandler):
     model = Room
-    #fields = ()
+
+class AvailableRoomHandler(BaseHandler):
+    model = AvailableRoom
+    fields = [
+        'price',
+        ('room', ('number', 'hotel')),
+    ]

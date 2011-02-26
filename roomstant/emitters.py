@@ -15,7 +15,7 @@ class JSONEncoder(simplejson.JSONEncoder):
     def default(self, o):
        if isinstance(o, datetime.datetime):
            d = datetime_safe.new_datetime(o)
-           return defaultfilters.datetime(d, "SHORT_DATE_FORMAT")
+           return defaultfilters.date(d, "SHORT_DATE_FORMAT")
        elif isinstance(o, datetime.date):
            d = datetime_safe.new_date(o)
            return defaultfilters.date(d, "SHORT_DATE_FORMAT")
