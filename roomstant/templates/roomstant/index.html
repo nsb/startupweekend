@@ -1,6 +1,7 @@
 {% extends "roomstant/appbase.html" %}
 
 {% block page %}
+<div data-role="page">
 
 <script lang="javascript">
 if (navigator.geolocation) {
@@ -22,20 +23,23 @@ if (navigator.geolocation) {
 <h1 class="boxHeader">Importance</h1>
 <img src="{{ MEDIA_URL }}img/sliders.jpeg" style="width:450px;">
 
-<div data-role="fieldcontain" id="price_slider">
+<form action="" method="POST">
+
+<div class="ui-slider  ui-btn-down-c ui-btn-corner-all" role="application"><a href="#" class="ui-slider-handle ui-btn ui-btn-corner-all ui-shadow ui-btn-up-c" data-theme="c" role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="35" aria-valuetext="35" title="35" aria-labelledby="slider-label" style="left: 35%; "><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text"></span></span></a></div>
+
+  <div data-role="fieldcontain" id="price_slider">
     <label for="slider">Low price:</label>
     <input type="range" name="slider" id="price_slider" value="80" min="0" max="100"  />
-</div>
-
-<div data-role="fieldcontain" id="distance_slider">
+  </div>
+  <div data-role="fieldcontain" id="distance_slider">
     <label for="slider">Low distance:</label>
     <input type="range" name="slider" id="distance_slider" value="20" min="0" max="100"  />
-</div>
-
-<div data-role="fieldcontain" id="stars_slider">
+  </div>
+  <div data-role="fieldcontain" id="stars_slider">
     <label for="slider">Stars:</label>
     <input type="range" name="slider" id="starts_slider" value="3" min="1" max="5"  />
-</div>
+  </div>
+</form>
 
 </div>
 
@@ -61,6 +65,7 @@ if (navigator.geolocation) {
 </script>
 
 
+</div>
 {% endblock page %}
 
 {% block javascript %}
