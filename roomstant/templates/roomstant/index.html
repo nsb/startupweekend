@@ -36,13 +36,19 @@
 <img src="{{ MEDIA_URL }}img/room.jpg" style="width:75px">
 </div>
 
-
-{{ rooms|safe }}
+<script type="text/html" id="TemplateRecommendRoom">
+<div class=boxes>
+  <h1 class="boxHeader">Suggestion</h1>
+  <img src="{{ MEDIA_URL }}img/room.jpg" style="width:200px">
+</div>
+</script>
 
 {% endblock page %}
 
 {% block javascript %}
+  <script type="text/javascript">
+  var ROOMSTANT = {}
+  ROOMSTANT.Rooms = {{ rooms|safe }};
+  </script>
   {{ block.super }}
-  <script src="http://code.jquery.com/mobile/1.0a2/jquery.mobile-1.0a2.min.js"></script>  
-
 {% endblock javascript %}
