@@ -11,4 +11,4 @@ class HotelHandler(BaseHandler):
 
 class RoomHandler(BaseHandler):
     model = Room
-    fields = ()
+    #fields = ()

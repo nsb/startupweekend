@@ -37,4 +37,12 @@
 </div>
 
 
+{{ rooms|safe }}
+
 {% endblock page %}
+
+{% block javascript %}
+  {{ block.super }}
+  <script src="http://code.jquery.com/mobile/1.0a2/jquery.mobile-1.0a2.min.js"></script>  
+
+{% endblock javascript %}

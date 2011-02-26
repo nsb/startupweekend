@@ -10,7 +10,11 @@ class Hotel(models.Model):
 
 class Room(models.Model):
     hotel = models.ForeignKey(Hotel, related_name='rooms')
-    image = models.ImageField(upload_to='rooms')
+    number = models.CharField(max_length=256)
+    image = models.ImageField(upload_to='rooms', null=True, blank=True)
+
+    def __unicode__(self):
+        return '%s: %s' % (self.hotel, self.number)
 
 class AvailableRoom(models.Model):
     room = models.ForeignKey(Room, related_name='available')
