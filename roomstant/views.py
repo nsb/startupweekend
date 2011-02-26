@@ -5,12 +5,11 @@ from django.template import RequestContext
 from piston.handler import typemapper
 
 from emitters import JSONEmitter, JSONEncoderForHTML
-from handlers import HotelHandler, RoomHandler
+from handlers import HotelHandler, RoomHandler, AvailableRoomHandler
 
 def index(request, *args, **kwargs):
 
-    # Cheat a little and bootstrap events to avoid an initial API request
-    handler= RoomHandler()
+    handler= AvailableRoomHandler()
     result = handler.read(request, *args, **kwargs)
     srl = JSONEmitter(result, typemapper, handler, handler.fields, not request.user.is_authenticated())
 

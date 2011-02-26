@@ -55,8 +55,9 @@ if (navigator.geolocation) {
 <script type="text/html" id="TemplateSuggestedRoom">
 <div class=boxes>
   <h1 class="boxHeader">Suggestion</h1>
-  <div><%= number %></div>
-  <div><%= hotel.name %></div> 
+  <div><%= room.number %></div>
+  <div><%= room.hotel.name %></div>
+  <div><%= price %> DKK</div>
   <img src="{{ MEDIA_URL }}img/room.jpg" style="width:200px">
 </div>
 </script>
