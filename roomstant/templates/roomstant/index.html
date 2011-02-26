@@ -2,6 +2,17 @@
 
 {% block page %}
 
+<script lang="javascript">
+if (navigator.geolocation) {
+  navigator.geolocation.getCurrentPosition(function(position) {
+    var lat = position.coords.latitude;
+    var lng = position.coords.longitude;
+    
+    alert("Your position: "+lat+", "+lng);
+  });
+}
+
+</script>
 
 <!-- Suggestion -->
 <div class=boxes>
@@ -32,6 +43,14 @@
 </div>
 
 <!-- mini-suggestions -->
+<div class="boxes">
+<img src="{{ MEDIA_URL }}img/room.jpg" style="width:75px">
+</div>
+
+<div class="boxes">
+<img src="{{ MEDIA_URL }}img/room.jpg" style="width:75px">
+</div>
+
 <div class="boxes">
 <img src="{{ MEDIA_URL }}img/room.jpg" style="width:75px">
 </div>
