@@ -4,6 +4,8 @@ class Hotel(models.Model):
     name = models.CharField(max_length=512)
     email = models.EmailField()
     stars = models.PositiveIntegerField()
+    lat = models.DecimalField(max_digits=10, decimal_places=7)
+    lon = models.DecimalField(max_digits=10, decimal_places=7)
 
     def __unicode__(self):
         return self.name
