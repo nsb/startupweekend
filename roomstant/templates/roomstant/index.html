@@ -40,17 +40,9 @@ if (navigator.geolocation) {
 </div>
 
 <!-- mini-suggestions -->
-<div class="boxes">
-<img src="{{ MEDIA_URL }}img/room.jpg" style="width:75px">
-</div>
 
-<div class="boxes">
-<img src="{{ MEDIA_URL }}img/room.jpg" style="width:75px">
-</div>
+<div id="suggestion_list"></div>
 
-<div class="boxes">
-<img src="{{ MEDIA_URL }}img/room.jpg" style="width:75px">
-</div>
 
 <script type="text/html" id="TemplateSuggestedRoom">
 <div class=boxes>
@@ -60,6 +52,13 @@ if (navigator.geolocation) {
   <img src="{{ MEDIA_URL }}img/room.jpg" style="width:200px">
 </div>
 </script>
+
+<script type="text/html" id="TemplateSuggestion_list">
+<div class=boxes>
+  <img src="{{ MEDIA_URL }}img/room.jpg" style="width:75px">
+  <div id="suggestionListSpec"><%= hotel.name %></div>
+</script>
+
 
 {% endblock page %}
 

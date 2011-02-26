@@ -20,3 +20,8 @@ h1{
 .boxHeader{
     margin-top:-5px;
 }
+
+.suggestionListSpec{
+    left: 125px;
+    position:absolute;
+}
