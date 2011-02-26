@@ -22,20 +22,23 @@ if (navigator.geolocation) {
 <h1 class="boxHeader">Importance</h1>
 <img src="{{ MEDIA_URL }}img/sliders.jpeg" style="width:450px;">
 
-<div data-role="fieldcontain" id="price_slider">
-    <label for="slider">Low price:</label>
-    <input type="range" name="slider" value="80" min="0" max="100"  />
+<form action="" method="POST">
+
+  <div data-role="fieldcontain" id="price_slider">
+    <label for="price_slider">Low price:</label>
+    <input type="range" name="price_slider" value="80" min="0" max="100"  />
 </div>
 
 <div data-role="fieldcontain" id="distance_slider">
-    <label for="slider">Low distance:</label>
-    <input type="range" name="slider" value="20" min="0" max="100"  />
+    <label for="distance_slider">Low distance:</label>
+    <input type="range" name="distance_slider" value="20" min="0" max="100"  />
 </div>
 
 <div data-role="fieldcontain" id="stars_slider">
-    <label for="slider">Stars:</label>
-    <input type="range" name="slider" value="3" min="1" max="5"  />
+    <label for="stars_slider">Stars:</label>
+    <input type="range" name="stars_slider" value="3" min="1" max="5"  />
 </div>
+</form>
 
 </div>
 

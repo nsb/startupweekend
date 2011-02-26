@@ -8,7 +8,7 @@ jQuery.noConflict();
   });
   
   function renderResults(){
-    //     Main suggestion
+    // Main suggestion
     var suggestedTemplate = $("#TemplateSuggestedRoom").html();
     var t = _.template(suggestedTemplate);
     if ($R.Rooms.length) {
@@ -18,13 +18,14 @@ jQuery.noConflict();
     //suggestion list
     var suggestionListTemplate = $("#TemplateSuggestion_list").html();
     var t = _.template(suggestionListTemplate);
-    
+
     for (var i=0;i<$R.Rooms.length;i++){
       if (i>3) break;  
       var out = t($R.Rooms[i]);
       $("#suggestion_list").append(out);
     }
-}
+  }
+
 
   function priceSort(a,b){
     if (a.price<b.price){
@@ -82,7 +83,6 @@ jQuery.noConflict();
         distance = $("#distance_slider input").value;
         stars = $("#stars_slider input").value*20;
         sortRooms(price,distance,stars);
-        console.log($R.Rooms);
         
     }
     $("#price_slider input, #distance_slider input,#stars_slider input").change(handlePreferenceChange);
