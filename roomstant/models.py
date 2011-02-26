@@ -5,7 +5,11 @@ class Hotel(models.Model):
     email = models.EmailField()
     stars = models.PositiveIntegerField()
 
+    def __unicode__(self):
+        return self.name
+
 class Room(models.Model):
+    hotel = models.ForeignKey(Hotel, related_name='rooms')
     image = models.ImageField(upload_to='rooms')
 
 class AvailableRoom(models.Model):
@@ -13,5 +17,8 @@ class AvailableRoom(models.Model):
     price = models.DecimalField(max_digits=7, decimal_places=2)
     date = models.DateTimeField()
 
-class booking(models.Model):
+    def __unicode__(self):
+        return self.room
+
+class Booking(models.Model):
     name = models.CharField(max_length=512)
