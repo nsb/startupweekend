@@ -105,3 +105,10 @@ INSTALLED_APPS = (
     # 'django.contrib.admindocs',
     'roomstant',
 )
+
+try:
+    from settings_local import *
+except ImportError:
+    import sys
+    sys.stderr.write('Unable to read settings_local.py\n')
+    sys.exit(1)
