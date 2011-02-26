@@ -106,9 +106,9 @@ INSTALLED_APPS = (
     'roomstant',
 )
 
-try:
-    from settings_local import *
-except ImportError:
-    import sys
-    sys.stderr.write('Unable to read settings_local.py\n')
-    sys.exit(1)
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'roomstant.db',
+    }
+}
