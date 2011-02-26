@@ -6,18 +6,34 @@
 <!-- Suggestion -->
 <div class=boxes>
 <h1 class="boxHeader">Suggestion</h1>
-<img src="{{ MEDIA_URL }}img/room.jpg" style="margin-left:10px;margin-bottom:10px; width:200px">
+<img src="{{ MEDIA_URL }}img/room.jpg" style="width:200px">
 </div>
-ddd
+
 <!-- Preferences -->
 <div class="boxes">
-<h1 class="boxHeader">Change your preferences</h1>
-<img src="{{ MEDIA_URL }}img/sliders.jpeg" style="margin-left:10px;margin-bottom:10px;width:450px;">
+<h1 class="boxHeader">Importance</h1>
+<img src="{{ MEDIA_URL }}img/sliders.jpeg" style="width:450px;">
+
+<div data-role="fieldcontain" id="price_slider">
+    <label for="slider">Low price:</label>
+    <input type="range" name="slider" id="slider" value="80" min="0" max="100"  />
+</div>
+
+<div data-role="fieldcontain" id="distance_slider">
+    <label for="slider">Low distance:</label>
+    <input type="range" name="slider" id="slider" value="20" min="0" max="100"  />
+</div>
+
+<div data-role="fieldcontain" id="Stars_slider">
+    <label for="slider">Stars:</label>
+    <input type="range" name="slider" id="slider" value="3" min="1" max="5"  />
+</div>
+
 </div>
 
 <!-- mini-suggestions -->
 <div class="boxes">
-<img src="{{ MEDIA_URL }}img/room.jpg" style="margin-left:10px;margin-bottom:10px; width:75px">
+<img src="{{ MEDIA_URL }}img/room.jpg" style="width:75px">
 </div>
 
 

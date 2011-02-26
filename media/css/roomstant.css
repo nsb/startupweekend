@@ -1,13 +1,20 @@
 body {
     margin-left:15px;
+    background-color:#F5FAFA;
 }
 .boxes {
-width:500px;
-background-color:#caffaf;
-padding-left:10px;
-padding-top:5px;
-border-radius:15px;
-margin-top:10px;
+    width:500px;
+    background-color:#ACD1E9;
+    padding:10px;
+    border-radius:15px;
+    margin-top:10px;
+}
+
+h1{
+    font-size:153.9%;
+    margin-top:5px;
+    margin-bottom:5px;
+    font-family:sans-serif;
 }
 
 .boxHeader{
