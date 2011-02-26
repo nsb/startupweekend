@@ -1,3 +1,15 @@
 body {
-  
+    margin-left:15px;
+}
+.boxes {
+width:500px;
+background-color:#caffaf;
+padding-left:10px;
+padding-top:5px;
+border-radius:15px;
+margin-top:10px;
+}
+
+.boxHeader{
+    margin-top:-5px;
 }
