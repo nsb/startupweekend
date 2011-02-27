@@ -51,6 +51,20 @@ a {
   border-left: none;
 }
 
+.boxes.sliders {
+  overflow: hidden;
+}
+
+.boxes.sliders form > div {
+  float: left;
+  text-align: center;
+}
+
+input[type="range"] {
+  -webkit-appearance: slider-vertical;
+  height: 90px;
+}
+
 .boxes {
     position: relative;
     background-color: #fff;
