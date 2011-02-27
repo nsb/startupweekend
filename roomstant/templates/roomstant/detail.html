@@ -6,8 +6,30 @@
 <div id="content">
 
   <div class="boxes">
-   <h3>{{ room.room.name }}</h3>
    <img src="{{ MEDIA_URL }}{{ room.room.image }}" style="width:200px">
+   <div class="suggestionListSpec">
+      <div class="suggestionListHotelName">{{ room.room.hotel.name }}</div>
+      <div class="suggestionListName">{{ room.room.name }}</div>
+      <div class="suggestionListPrice">{{ room.price }} DKK</div>
+    </div>
+
+    <div class="clear"></div>
+
+    <form>
+      <table>
+        <tr>
+        <td><label>Name:</label></td><td><input type="text" /></td>
+        </tr>
+        <tr>
+        <td><label>Card Number:</label></td><td><input type="text" /></td>
+        </tr>
+      </table>
+
+      <input type="submit" value="Book room" />
+
+    </form>
+
+
   </div>
 </div>
 

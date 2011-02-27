@@ -93,3 +93,12 @@ h1{
 .boxHeader{
     margin-top:-5px;
 }
+
+form td {
+  padding: 10px;
+}
+
+.clear {
+  clear: both;
+  margin: 20px 0px;
+}
