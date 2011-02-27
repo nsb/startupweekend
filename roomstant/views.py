@@ -18,3 +18,8 @@ def index(request, *args, **kwargs):
         'rooms':srl.render(request, encoder=JSONEncoderForHTML),
         }, RequestContext(request)
     )
+
+def detail(request, room_id):
+    return render_to_response(
+        'roomstant/detail.html', RequestContext(request)
+    )
