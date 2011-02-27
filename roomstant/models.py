@@ -17,7 +17,7 @@ class Room(models.Model):
     description = models.TextField()
 
     def __unicode__(self):
-        return '%s: %s' % (self.hotel, self.number)
+        return '%s: %s' % (self.hotel, self.name)
 
 class AvailableRoom(models.Model):
     room = models.ForeignKey(Room, related_name='available')
