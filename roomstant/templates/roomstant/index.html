@@ -9,23 +9,23 @@
 <div id="suggestion"></div>
 
 <!-- Preferences -->
-<div class="boxes">
+<div class="boxes sliders">
 <form action="" method="POST">
 
   <div data-role="fieldcontain" id="price_slider">
-    <label for="price_slider">Low price:</label>
-    <input type="range" name="price_slider" value="65" min="1" max="100"  />
-</div>
+    <div><input type="range" name="price_slider" value="65" min="1" max="100"  /></div>
+    <div><label for="price_slider">Price</label></div>
+  </div>
 
-<div data-role="fieldcontain" id="distance_slider">
-    <label for="distance_slider">Low distance:</label>
-    <input type="range" name="distance_slider" value="80" min="1" max="100"  />
-</div>
+  <div data-role="fieldcontain" id="distance_slider">
+    <div><input type="range" name="distance_slider" value="80" min="1" max="100"  /></div>
+    <div><label for="distance_slider">Distance</label></div>
+  </div>
 
-<div data-role="fieldcontain" id="stars_slider">
-    <label for="stars_slider">Stars:</label>
-    <input type="range" name="stars_slider" value="3" min="1" max="5"  />
-</div>
+  <div data-role="fieldcontain" id="stars_slider">
+    <div><input type="range" name="stars_slider" value="3" min="1" max="5"  /></div>
+    <div><label for="stars_slider">Quality</label></div>
+  </div>
 </form>
 
 </div>
