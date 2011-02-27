@@ -42,9 +42,9 @@
   <h1 class="boxHeader">Suggested room</h1>
   <img src="{{ MEDIA_URL }}<%= room.image %>" style="width:200px">
   <div class="suggestionListSpec">
-    <div><%= room.hotel.name %> <% for(var i=0;i<room.hotel.stars;i++){ %> *<% } %></div>
+    <div class="suggestTitle"><%= room.hotel.name %> <% for(var i=0;i<room.hotel.stars;i++){ %> *<% } %></div>
     <div><%= room.name %></div>
-    <div><%= price %> DKK</div>
+    <div><span class="suggestPrice"><%= price %></span> DKK</div>
   </div>
 </div>
 </script>

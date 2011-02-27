@@ -58,6 +58,19 @@ a {
     overflow: hidden;
 }
 
+.suggestTitle{
+    font-size:140%;
+    margin-top:5px;
+    margin-bottom:5px;
+    font-family:sans-serif;
+}
+.suggestPrice{
+    font-size:300%;
+    margin-top:5px;
+    margin-bottom:5px;
+    font-family:sans-serif;
+}
+
 .boxes img, .boxes .suggestionListSpec {
   float: left;
   margin-right: 10px;
