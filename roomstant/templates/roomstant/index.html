@@ -38,7 +38,7 @@
 </div>
 
 <script type="text/html" id="TemplateSuggestedRoom">
-<div class=boxes>
+<div class="boxes">
   <h1 class="boxHeader">Suggestion</h1>
   <div><%= room.hotel.name %> <%= room.hotel.stars %>*</div>
   <div><%= room.name %></div>
@@ -48,14 +48,14 @@
 </script>
 
 <script type="text/html" id="TemplateSuggestion_list">
-<div class=boxes>
-  <div class="suggestionListSpec">
-  <div class="suggestionListHotelName"><%= room.hotel.name %> <%= room.hotel.stars %>*</div>
-  <div class="suggestionListName"><%= room.name %> <%= distance %> </div>
-  <div class="suggestionListPrice"><%= price %> DKK</div>
-  </div>
+<div class="boxes">
   <img src="{{ MEDIA_URL }}<%= room.image %>" style="width:75px">
-  
+  <div class="suggestionListSpec">
+    <div class="suggestionListHotelName"><%= room.hotel.name %> <%= room.hotel.stars %>*</div>
+    <div class="suggestionListName"><%= room.name %> <%= distance %> </div>
+    <div class="suggestionListPrice"><%= price %> DKK</div>
+  </div>
+</div>  
 </script>
 
 {% endblock page %}

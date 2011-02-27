@@ -54,9 +54,16 @@ a {
 .boxes {
     background-color: #fff;
     padding:20px;
-    border-radius:15px;
     margin-top:20px;
+    overflow: hidden;
 }
+
+.boxes img, .boxes .suggestionListSpec {
+  float: left;
+  margin-right: 10px;
+}
+
+
 
 h1{
     font-size:153.9%;
@@ -67,9 +74,4 @@ h1{
 
 .boxHeader{
     margin-top:-5px;
-}
-
-.suggestionListSpec{
-    left: 125px;
-    position:absolute;
 }
