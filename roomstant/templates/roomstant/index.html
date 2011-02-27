@@ -51,7 +51,7 @@
 <div class=boxes>
   <div class="suggestionListSpec">
   <div class="suggestionListHotelName"><%= room.hotel.name %> <%= room.hotel.stars %>*</div>
-  <div class="suggestionListName"><%= room.name %></div>
+  <div class="suggestionListName"><%= room.name %> <%= distance %> </div>
   <div class="suggestionListPrice"><%= price %> DKK</div>
   </div>
   <img src="{{ MEDIA_URL }}<%= room.image %>" style="width:75px">

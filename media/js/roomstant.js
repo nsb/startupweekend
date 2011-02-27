@@ -74,17 +74,16 @@ jQuery.noConflict();
     function calculateDistance(locationLat,locationLon){
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(function(position) {
-                $R.lat = position.coords.latitude;
-                $R.lon = position.coords.longitude;
+                x1=position.coords.latitude;
+                y1=position.coords.longitude;
+                for (var i=0;i<$R.Rooms.length;i++){
+                    x2 = $R.Rooms[i].room.hotel.lat;
+                    y2 = $R.Rooms[i].room.hotel.lon;
+                    $R.Rooms[i].distance = Math.sqrt((x1-x2)^2 +(y1-y2)^2);
+                }
 //                 console.log("Your position: "+lat+", "+lng);
         })} else {console.log("cant calculate position.")}
-        x1=$R.lat;
-        y1=$R.lon;
-        for (var i=0;i<$R.Rooms.length;i++){
-            x2 = $R.Rooms[i].room.hotel.lat;
-            y2 = $R.Rooms[i].room.hotel.lon;
-            $R.Rooms[i].distance = Math.sqrt((x1-x2)^2 +(y1-y2)^2);
-        }
+        
         return;
     }
     var t;
