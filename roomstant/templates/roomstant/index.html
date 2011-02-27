@@ -39,11 +39,13 @@
 
 <script type="text/html" id="TemplateSuggestedRoom">
 <div class="boxes">
-  <h1 class="boxHeader">Suggestion</h1>
-  <div><%= room.hotel.name %> <%= room.hotel.stars %>*</div>
-  <div><%= room.name %></div>
-  <div><%= price %> DKK</div>
+  <h1 class="boxHeader">Suggested room</h1>
   <img src="{{ MEDIA_URL }}<%= room.image %>" style="width:200px">
+  <div class="suggestionListSpec">
+    <div><%= room.hotel.name %> <%= room.hotel.stars %>*</div>
+    <div><%= room.name %></div>
+    <div><%= price %> DKK</div>
+  </div>
 </div>
 </script>
 
