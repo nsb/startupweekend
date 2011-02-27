@@ -70,6 +70,13 @@ h1{
     font-family:sans-serif;
 }
 
+.suggestionListSpec .star {
+/*     background: url(/static/img/star.png); */
+    background-color:blue;
+    width:16px;
+    height:16px;
+}
+
 .boxHeader{
     margin-top:-5px;
 }
