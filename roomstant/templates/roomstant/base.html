@@ -10,7 +10,7 @@
   <body>
     {% block page %}{% endblock page %}
     {% block javascript %}
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+    <script src="{{ MEDIA_URL }}js/lib/jquery-1.5.1.min.js" type="text/javascript" charset="utf-8"></script>
     {% endblock javascript %}
   </body>
 </html>
