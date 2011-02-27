@@ -4,7 +4,11 @@
 {{ block.super }}
 
 <div id="content">
- {{ room.room.name }}
+
+  <div class="boxes">
+   <h3>{{ room.room.name }}</h3>
+   <img src="{{ MEDIA_URL }}{{ room.room.image }}" style="width:200px">
+  </div>
 </div>
 
 {% endblock page %}
