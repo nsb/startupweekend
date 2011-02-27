@@ -60,7 +60,7 @@ jQuery.noConflict();
     function sortRooms(pricePreference,distancePreference,starPreference){
         if (pricePreference >= distancePreference && pricePreference>=starPreference){
             $R.Rooms.sort(priceSort);
-        } else if (pricePreference>=starPreference){
+        } else if (distancePreference>=starPreference){
             calculateDistance();
             $R.Rooms.sort(distanceSort);
         } else {
@@ -69,8 +69,14 @@ jQuery.noConflict();
     }
 
     function calculateDistance(locationLat,locationLon){
-        x1=locationLat;
-        y1=locationLon;
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function(position) {
+                $R.lat = position.coords.latitude;
+                $R.lon = position.coords.longitude;
+//                 console.log("Your position: "+lat+", "+lng);
+        })} else {console.log("cant calculate position.")}
+        x1=$R.lat;
+        y1=$R.lon;
         for (var i=0;i<$R.Rooms.length;i++){
             x2 = $R.Rooms[i].room.hotel.lat;
             y2 = $R.Rooms[i].room.hotel.lon;
