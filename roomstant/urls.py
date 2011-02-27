@@ -11,4 +11,5 @@ from roomstant.handlers import HotelHandler, RoomHandler
 urlpatterns = patterns('roomstant.views',
 
     (r'^$', 'index', {}, 'index',),
+    (r'^(?P<room_id>[\d]+)/$', 'detail', {}, 'detail',),
 )
