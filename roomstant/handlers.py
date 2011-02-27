@@ -14,6 +14,7 @@ class RoomHandler(BaseHandler):
 class AvailableRoomHandler(BaseHandler):
     model = AvailableRoom
     fields = [
+        'id',
         'price',
         ('room', ('name', 'hotel', 'image', 'description')),
     ]
