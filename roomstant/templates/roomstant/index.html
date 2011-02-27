@@ -53,9 +53,10 @@
 <div class="boxes">
   <img src="{{ MEDIA_URL }}<%= room.image %>" style="width:75px">
   <div class="suggestionListSpec">
-    <div class="suggestionListHotelName"><%= room.hotel.name %> <% for(var i=0;i<room.hotel.stars;i++){ %> *<% } %></div>
-    <div class="suggestionListName"><%= room.name %> <%= distance %> </div>
-    <div class="suggestionListPrice"><%= price %> DKK</div>
+    <div class="suggestionListPrice"><span class="suggestPrice"><%= price %></span> DKK</div>
+    <div class="suggestionListTitle"><%= room.hotel.name %> <% for(var i=0;i<room.hotel.stars;i++){ %> *<% } %></div>
+    <div class="suggestionListName"><%= room.name %></div>
+    
     <a class="goButton small" href="/demo/<%=id%>/">GO</a>
   </div>
 </div>  

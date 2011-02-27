@@ -112,9 +112,21 @@ h1{
     width:16px;
     height:16px;
 }
+.suggestionListTitle{
+    font-size:140%;
+    margin-top:0px;
+    margin-bottom:0px;
+    font-family:sans-serif;
+}
 
 .boxHeader{
     margin-top:-5px;
+}
+
+.suggestionListPrice{
+    position: absolute;
+    right:100px;
+    font-size:80%;
 }
 
 form td {
