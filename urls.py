@@ -16,5 +16,5 @@ urlpatterns = patterns('',
     (r'^admin/', include(admin.site.urls)),
 
     url(r'^static/(.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
-    (r'^', include('roomstant.urls')),
+    (r'^demo/', include('roomstant.urls')),
 )
