@@ -121,6 +121,10 @@ form td {
   padding: 10px;
 }
 
+form button {
+  font-size: 200%;
+}
+
 .clear {
   clear: both;
   margin: 20px 0px;
