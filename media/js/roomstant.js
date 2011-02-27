@@ -64,6 +64,8 @@ jQuery.noConflict();
             calculateDistance();
             $R.Rooms.sort(distanceSort);
         } else {
+            a=2;
+            //bla
             $R.Rooms.sort(starSort);
         }
     }
@@ -84,16 +86,20 @@ jQuery.noConflict();
         }
         return;
     }
-    
+    var t;
+    document.render = renderResults;
+
     function handlePreferenceChange(){
         price = $("#price_slider input").val();
         distance = $("#distance_slider input").val();
         stars = $("#stars_slider input").val()*20;
         sortRooms(price,distance,stars);
-        renderResults();
+        if (t) clearTimeout(t);
+        t= setTimeout("document.render();",200);
     }
     $("#price_slider input, #distance_slider input,#stars_slider input").change(handlePreferenceChange);
     handlePreferenceChange();
+    
     
 })(jQuery, ROOMSTANT);
 
