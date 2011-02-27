@@ -39,9 +39,9 @@ jQuery.noConflict();
   }
   
     function distanceSort(a,b){
-        if (a._distance<b._distance){
+        if (a.distance<b.distance){
             return -1;
-        } else if (a._distance>=b._distance){
+        } else if (a.distance>=b.distance){
             return 1;
         } else {
             return 0;
@@ -83,7 +83,7 @@ jQuery.noConflict();
         for (var i=0;i<$R.Rooms.length;i++){
             x2 = $R.Rooms[i].room.hotel.lat;
             y2 = $R.Rooms[i].room.hotel.lon;
-            $R.Rooms[i]._distance = Math.sqrt((x1-x2)^2 +(y1-y2)^2);
+            $R.Rooms[i].distance = Math.sqrt((x1-x2)^2 +(y1-y2)^2);
         }
         return;
     }
@@ -91,6 +91,8 @@ jQuery.noConflict();
     document.render = renderResults;
 
     function handlePreferenceChange(){
+//         myprice = document.getElementsByName("price_slider").value;
+//         console.log(myprice);
         price = $("#price_slider input").val();
         distance = $("#distance_slider input").val();
         stars = $("#stars_slider input").val()*20;
