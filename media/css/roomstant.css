@@ -52,6 +52,7 @@ a {
 }
 
 .boxes {
+    position: relative;
     background-color: #fff;
     padding:20px;
     margin-top:20px;
@@ -69,6 +70,28 @@ a {
     margin-top:5px;
     margin-bottom:5px;
     font-family:sans-serif;
+}
+
+.goButton{
+    position: absolute;
+    right:20px;
+    bottom:20px;
+    Background-color:#AAAAAA;
+    color:white;
+    font-weight:bold;
+    text-align:center;
+    width:150px;
+    height:70px;
+    font-size:300%;
+    line-height:70px;
+    border-radius:10px;
+}
+
+.goButton.small{
+    width:50px;
+    height:25px;
+    font-size:100%;
+    line-height:25px;
 }
 
 .boxes img, .boxes .suggestionListSpec {
