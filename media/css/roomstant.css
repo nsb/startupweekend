@@ -5,21 +5,23 @@ body {
     font-size: 1.2em;
 }
 
-#header_wrapper {
-  background-color: #fff;
-  width: 100%;
-}
-
-#header {
-  margin: 0 auto;
-  width: 950px;
-  overflow: hidden;
-  height: 85px;
-}
-
 a {
   color: #041452;
   text-decoration: none;
+}
+
+#header_wrapper {
+  background-color: #fff;
+}
+
+#header, #content {
+  margin: 0 auto;
+  width: 950px;
+}
+
+#header {
+  overflow: hidden;
+  height: 85px;
 }
 
 #header .logo {
@@ -49,23 +51,11 @@ a {
   border-left: none;
 }
 
-#content {
-  margin: 0 auto;
-  width: 950px;
-}
-
-input[type="range"] {
-}
-
 .boxes {
-    width:500px;
-    background-color:#ACD1E9;
-/*     background-color:#cbcbcb; */
-
-    
-    padding:10px;
+    background-color: #fff;
+    padding:20px;
     border-radius:15px;
-    margin-top:10px;
+    margin-top:20px;
 }
 
 h1{
