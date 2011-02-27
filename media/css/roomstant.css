@@ -2,6 +2,10 @@ body {
     margin-left:15px;
     background-color:#F5FAFA;
 }
+input[type="range"] {
+  background-color: red;
+}
+
 .boxes {
     width:500px;
     background-color:#ACD1E9;
