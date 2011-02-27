@@ -3,7 +3,6 @@ body {
     background-color:#F5FAFA;
 }
 input[type="range"] {
-  background-color: red;
 }
 
 .boxes {
