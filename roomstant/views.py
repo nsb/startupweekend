@@ -6,6 +6,7 @@ from piston.handler import typemapper
 
 from emitters import JSONEmitter, JSONEncoderForHTML
 from handlers import HotelHandler, RoomHandler, AvailableRoomHandler
+from models import AvailableRoom
 
 def index(request, *args, **kwargs):
 
@@ -21,5 +22,5 @@ def index(request, *args, **kwargs):
 
 def detail(request, room_id):
     return render_to_response(
-        'roomstant/detail.html', RequestContext(request)
+        'roomstant/detail.html', RequestContext(request, {'room':AvailableRoom.objects.get(pk=room_id)})
     )
