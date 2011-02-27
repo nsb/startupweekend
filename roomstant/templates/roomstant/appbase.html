@@ -2,7 +2,6 @@
 {% block css %}
   {{ block.super }}
   <link rel="stylesheet" href="{{ MEDIA_URL }}css/roomstant.css" type="text/css">
-  <link rel="stylesheet" href="{{ MEDIA_URL }}css/jquery.mobile-1.0a2.min.css" type="text/css">
 {% endblock css %}
 
 {% block page %}
@@ -39,5 +38,4 @@ if (navigator.geolocation) {
   <script src="{{ MEDIA_URL }}js/lib/underscore-min.js" type="text/javascript" charset="utf-8"></script>
   <script src="{{ MEDIA_URL }}js/lib/backbone-min.js" type="text/javascript" charset="utf-8"></script>
   <script src="{{ MEDIA_URL }}js/roomstant.js" type="text/javascript" charset="utf-8"></script>
-  <script src="{{ MEDIA_URL }}js/lib/jquery.mobile-1.0a2.min.js" type="text/javascript" charset="utf-8"></script>
 {% endblock javascript %}
