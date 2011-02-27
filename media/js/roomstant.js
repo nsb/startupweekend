@@ -20,7 +20,7 @@ jQuery.noConflict();
     var suggestionListTemplate = $("#TemplateSuggestion_list").html();
     var t = _.template(suggestionListTemplate);
     $("#suggestion_list").html("");
-    for (var i=0;i<$R.Rooms.length;i++){
+    for (var i=1;i<$R.Rooms.length;i++){
       if (i>3) break;  
       var out = t($R.Rooms[i]);
       $("#suggestion_list").append(out);
@@ -67,6 +67,7 @@ jQuery.noConflict();
             a=2;
             //bla
             $R.Rooms.sort(starSort);
+            $R.Rooms.reverse(); //we want the 5 stars first.
         }
     }
 
