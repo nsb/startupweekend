@@ -50,7 +50,7 @@ if (navigator.geolocation) {
   <div><%= room.number %></div>
   <div><%= room.hotel.name %></div>
   <div><%= price %> DKK</div>
-  <img src="{{ MEDIA_URL }}img/room.jpg" style="width:200px">
+  <img src="{{ MEDIA_URL }}<%= room.image %>" style="width:200px">
 </div>
 </script>
 
